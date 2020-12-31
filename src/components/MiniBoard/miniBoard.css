@@ -1,0 +1,38 @@
+.board_miniBoard{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  .mini_board3{
+    border-right: 2px solid black;
+
+  }
+
+  .mini_board_corner{
+    border-right: 2px solid black;
+
+  }
+
+  .board_miniBoard-number{
+    border: 1px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .board_miniBoard-input{
+    border: 1px solid black;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{
+   -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  
+  
