@@ -61,6 +61,17 @@ componentDidMount()
   render(){
      return(
       <div className="board">
+      <div class="board_frame-container">
+        <div class="board_frame board_frame-top board_frame-left"></div>
+        <div class="board_frame board_frame-top board_frame-left"></div>
+        <div class="board_frame board_frame-top board_frame-left board_frame-right"></div>
+        <div class="board_frame board_frame-top board_frame-left"></div>
+        <div class="board_frame board_frame-top board_frame-left"></div>
+        <div class="board_frame board_frame-top board_frame-left board_frame-right"></div>
+        <div class="board_frame board_frame-top board_frame-bottom board_frame-left"></div>
+        <div class="board_frame board_frame-top board_frame-bottom board_frame-left"></div>
+        <div class="board_frame board_frame-top board_frame-bottom board_frame-left board_frame-right"></div>
+      </div>
         <MiniBoard values={this.state.row0}/>
         <MiniBoard values={this.state.row1}/>
         <MiniBoard values={this.state.row2}/>
