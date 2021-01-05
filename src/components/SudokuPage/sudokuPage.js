@@ -6,6 +6,7 @@ import Navbar from '../NavBar/navbar.js';
 class Sudoku extends React.Component {
     constructor(props){
         super(props);
+
         this.state = {
          row0: [],
          row1: [],
@@ -44,9 +45,6 @@ class Sudoku extends React.Component {
           this.setState({row6 : grid[6]});
           this.setState({row7 : grid[7]});
           this.setState({row8 : grid[8]});
-    
-          console.log(grid);
-    
           
         }).catch(error => {
     
@@ -54,10 +52,53 @@ class Sudoku extends React.Component {
         });
     }
 
+    async solvePuzzle () {
+
+      let result = [];
+      
+      let temp = new Array(9);
+
+      for (let i = 0; i < 9; i++)
+        temp[i] = new Array(9);
+
+        temp[0] = this.state.row0;
+        temp[1] = this.state.row1;
+        temp[2] = this.state.row2;
+        temp[3] = this.state.row3;
+        temp[4] = this.state.row4;
+        temp[5] = this.state.row5;
+        temp[6] = this.state.row6;
+        temp[7] = this.state.row7;
+        temp[8] = this.state.row8;
+
+      await axios.post('http://localhost:8080/sudoku', {
+        array : temp
+      })
+      .then(function (response) {
+
+        result = response.data;
+
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+
+
+      this.setState({row0 : result[0]});
+      this.setState({row1 : result[1]});
+      this.setState({row2 : result[2]});
+      this.setState({row3 : result[3]});
+      this.setState({row4 : result[4]});
+      this.setState({row5 : result[5]});
+      this.setState({row6 : result[6]});
+      this.setState({row7 : result[7]});
+      this.setState({row8 : result[8]});
+    }
+
     render(){
         return(
             <div>
-                <Navbar data={this.state}/>
+                <Navbar solvePuzzle={this.solvePuzzle.bind(this)}/>
                 <div style={{margin: "100px 400px", display: "flex" }}>
                     <Board data={this.state}/>
                 </div>
