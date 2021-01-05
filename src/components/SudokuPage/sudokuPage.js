@@ -3,6 +3,8 @@ import axios from 'axios';
 import Board from '../Board/board.js';
 import Navbar from '../NavBar/navbar.js';
 
+import Message from '../Messages/message.js';
+
 class Sudoku extends React.Component {
     constructor(props){
         super(props);
@@ -17,6 +19,7 @@ class Sudoku extends React.Component {
          row6: [],
          row7: [],
          row8: [],
+         status: null
         }
       }
 
@@ -83,6 +86,7 @@ class Sudoku extends React.Component {
         console.log(error);
       });
 
+      this.setState({status : 0});
       this.setState({row0 : result[0]});
       this.setState({row1 : result[1]});
       this.setState({row2 : result[2]});
@@ -96,6 +100,7 @@ class Sudoku extends React.Component {
 
     async checkPuzzle () {
       
+      let data = 3;
       let temp = new Array(9);
 
       for (let i = 0; i < 9; i++)
@@ -116,12 +121,15 @@ class Sudoku extends React.Component {
       })
       .then(function (response) {
 
-        console.log(response.data);
+        data = response.data
+        console.log(data);
 
       })
       .catch(function (error) {
         console.log(error);
       });
+
+      this.setState({status : data});
     }
 
     async newTable() {
@@ -138,7 +146,8 @@ class Sudoku extends React.Component {
             for (let j = 0; j < 9; j++)
               grid[i][j] = response.data[i][j];
           }
-    
+
+        this.setState({status: 3});
         this.setState({row0 : grid[0]});
         this.setState({row1 : grid[1]});
         this.setState({row2 : grid[2]});
@@ -155,10 +164,10 @@ class Sudoku extends React.Component {
         return(
             <div>
                 <Navbar solvePuzzle={this.solvePuzzle.bind(this)}  checkPuzzle={this.checkPuzzle.bind(this)} newTable={this.newTable.bind(this)} />
-                <div style={{margin: "100px 400px", display: "flex" }}>
+                <div style={{margin: "80px 450px 50px 450px", display: "flex" }}>
                     <Board data={this.state}/>
                 </div>
-                <p></p>
+                <Message value={this.state.status}/>
             </div>
     )}
 }
