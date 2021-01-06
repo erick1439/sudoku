@@ -5,6 +5,7 @@ function Maze() {
     return(
         <div>
             <Navbar/>
+            <h1>In progress</h1>
         </div>
 
     );

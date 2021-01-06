@@ -120,10 +120,7 @@ class Sudoku extends React.Component {
         array : temp
       })
       .then(function (response) {
-
         data = response.data
-        console.log(data);
-
       })
       .catch(function (error) {
         console.log(error);

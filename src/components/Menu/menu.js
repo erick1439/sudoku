@@ -14,7 +14,7 @@ function Menu() {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link className="nav-link" to={"/sudoku"}><Button variant="primary">Go </Button></Link>
+                    <Link className="nav-link" to={"/sudoku"}><Button variant="primary">Go to Sudoku Solver</Button></Link>
                 </Card.Body>
             </Card>
             <Card style={{ margin: '75px'}}>
@@ -24,7 +24,7 @@ function Menu() {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link className="nav-link" to={"/maze"}><Button variant="primary">GO to Path </Button></Link>                </Card.Body>
+                    <Link className="nav-link" to={"/maze"}><Button variant="primary">Go to Path Finder</Button></Link>                </Card.Body>
             </Card>
             <Card style={{ margin: '75px'}}>
                 <Card.Body>
@@ -33,7 +33,7 @@ function Menu() {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link className="nav-link" to={"/word-search"}><Button variant="primary">Go to word search </Button></Link>                </Card.Body>
+                    <Link className="nav-link" to={"/word-search"}><Button variant="primary">Go to Word Search</Button></Link>                </Card.Body>
             </Card>
         </div>
     );

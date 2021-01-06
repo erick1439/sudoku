@@ -5,9 +5,11 @@ import './home.css'
 function Home() {
     return (
         <div>
-            <h1>Lorem</h1>
+            <h1>Visual Puzzle Solver</h1>
             <p>
-                It is a long established fact that a reader will be distracted by the readable content of a page when 
+                The goal of this project is to give anyone an insight of how a computer will solve some common puzzles. The main goal
+                of this project is to show animations to demostrate all the computation that a computer will have to go through in 
+                in order to solve this problems. It is a long established fact that a reader will be distracted by the readable content of a page when 
                 looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution 
                 of letters, as opposed to using 'Content here, content here', making it look like readable English. 
                 Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, 
