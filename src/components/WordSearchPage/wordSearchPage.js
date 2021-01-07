@@ -2,27 +2,27 @@ import React from 'react';
 import axios from 'axios';
 import Navbar from '../NavBar/navbar.js';
 import WordBoard from '../WordBoard/wordBoard.js'
-
+import './wordSearchPage.css';
 class WordSearch extends React.Component {
     constructor(props){
         super(props);
     
         this.state = {
-            row0: [],
-            row1: [],
-            row2: [],
-            row3: [],
-            row4: [],
-            row5: [],
-            row6: [],
-            row7: [],
-            row8: [],
-            row9: [],
-            row10: [],
-            row11: [],
-            row12: [],
-            row13: [],
-            row14: [],
+            row0: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row1: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row2: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row3: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row4: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row5: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row6: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row7: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row8: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row9: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row10: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row11: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row12: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row13: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
+            row14: [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14],
             status: null
         }
     }
@@ -70,8 +70,13 @@ class WordSearch extends React.Component {
         return(
             <div>
                 <Navbar/>
-                <div style={{margin: "80px 450px 50px 450px", display: "flex" }}>
+                <div className="wordSearchPage">
                     <WordBoard data={this.state}/>
+                    <div className="words">
+                        <p>Luis</p>
+                        <p>Jose</p>
+                        <p>Esteban</p>
+                    </div>
                 </div>
             </div>
 

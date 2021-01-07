@@ -10,21 +10,21 @@ class Sudoku extends React.Component {
         super(props);
 
         this.state = {
-         row0: [],
-         row1: [],
-         row2: [],
-         row3: [],
-         row4: [],
-         row5: [],
-         row6: [],
-         row7: [],
-         row8: [],
+         row0: [0,1,2,3,4,5,6,7,8],
+         row1: [0,1,2,3,4,5,6,7,8],
+         row2: [0,1,2,3,4,5,6,7,8],
+         row3: [0,1,2,3,4,5,6,7,8],
+         row4: [0,1,2,3,4,5,6,7,8],
+         row5: [0,1,2,3,4,5,6,7,8],
+         row6: [0,1,2,3,4,5,6,7,8],
+         row7: [0,1,2,3,4,5,6,7,8],
+         row8: [0,1,2,3,4,5,6,7,8],
          status: null
         }
       }
 
-    componentDidMount()
-    {
+     componentDidMount()
+     {
         let grid = new Array(9);
     
         for (let i = 0; i < grid.length; i++)
@@ -161,9 +161,7 @@ class Sudoku extends React.Component {
         return(
             <div>
                 <Navbar solvePuzzle={this.solvePuzzle.bind(this)}  checkPuzzle={this.checkPuzzle.bind(this)} newTable={this.newTable.bind(this)} />
-                <div style={{margin: "80px 450px 50px 450px", display: "flex" }}>
-                    <Board data={this.state}/>
-                </div>
+                <Board data={this.state}/>
                 <Message value={this.state.status}/>
             </div>
     )}
