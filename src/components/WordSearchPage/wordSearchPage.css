@@ -1,0 +1,15 @@
+.wordSearchPage{
+    width: 100%;
+    margin-top:80px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .words{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 80px;
+    width: 100px;
+  }

@@ -2,8 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import Board from '../Board/board.js';
 import Navbar from '../NavBar/navbar.js';
-
 import Message from '../Messages/message.js';
+
+import './sudokuPage.css'
 
 class Sudoku extends React.Component {
     constructor(props){
@@ -161,7 +162,7 @@ class Sudoku extends React.Component {
         return(
             <div>
                 <Navbar solvePuzzle={this.solvePuzzle.bind(this)}  checkPuzzle={this.checkPuzzle.bind(this)} newTable={this.newTable.bind(this)} />
-                <div style={{margin: "80px 450px 50px 450px", display: "flex" }}>
+                <div className="" style={{display: "flex", justifyContent: "center", alignItems: "center", marginTop: "80px", marginBottom: "10px" }}>
                     <Board data={this.state}/>
                 </div>
                 <Message value={this.state.status}/>
