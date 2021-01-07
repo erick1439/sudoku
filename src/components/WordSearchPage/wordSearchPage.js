@@ -26,19 +26,34 @@ class WordSearch extends React.Component {
             row12: [],
             row13: [],
             row14: [],
+            wordList: [],
             status: null
         }
     }
 
-    componentDidMount()
+    async componentDidMount()
     {
+        let list = new Array(7);
         let grid = new Array(15);
     
         for (let i = 0; i < grid.length; i++)
           grid[i] = new Array(15);
+
+        await axios.get('http://localhost:8080/word-search/getList').then((response) => {
+
+        for (let i = 0; i < list.length; i++)
+            list[i] = response.data[i];
+        
+    
+        this.setState({wordList : list});
+
+        }).catch(error => {
+    
+            console.log(error);
+        });
     
     
-        axios.get('http://localhost:8080/word-search').then((response) => {
+        await axios.get('http://localhost:8080/word-search').then((response) => {
     
           for (let i = 0; i < 15; i++)
           {
@@ -75,7 +90,7 @@ class WordSearch extends React.Component {
                 <Navbar/>
                 <div className="wordSearchPage">
                     <WordBoard data={this.state}/>
-                    <div className="words"><WordList/></div>
+                    <div className="words"><WordList data={this.state.wordList}/></div>
                 </div> 
             </div>
 

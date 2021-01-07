@@ -1,13 +1,14 @@
 import React from 'react';
 
-function WordList() {
+function WordList(props) {
     const people = [
-      { name: 'chris' },
-      { name: 'nick' },
-      { name: 'erick' },
-      { name: 'jose' },
-      { name: 'carlos' },
-      { name: 'daniel' }
+      { name: props.data[0] },
+      { name: props.data[1] },
+      { name: props.data[2] },
+      { name: props.data[3] },
+      { name: props.data[4] },
+      { name: props.data[5] },
+      { name: props.data[6] }
     ];
   
     return (
