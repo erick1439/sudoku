@@ -44,7 +44,6 @@ class WordSearch extends React.Component {
         for (let i = 0; i < list.length; i++)
             list[i] = response.data[i];
         
-    
         this.setState({wordList : list});
 
         }).catch(error => {
