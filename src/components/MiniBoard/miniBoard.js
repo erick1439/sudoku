@@ -4,8 +4,6 @@ import './miniBoard.css';
 
 function MiniBoard({values}) {
   let frame = []; 
-  let i = 0;
-
 
   for (let i = 0; i < 9; i++)
   {
@@ -15,7 +13,6 @@ function MiniBoard({values}) {
 
     else
       frame.push(<div key={i} className="board_miniBoard-number">{values[i]}</div>);
-
   }
 
   return(
