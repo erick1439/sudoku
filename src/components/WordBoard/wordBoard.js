@@ -5,17 +5,6 @@ import WordMiniBoard from '../WordMiniBoard/wordMiniBoard.js';
 function WordBoard(props){
     return (
         <div className="board">
-        <div className="board_frame-container">
-          <div className="board_frame board_frame-top board_frame-left"></div>
-          <div className="board_frame board_frame-top board_frame-left"></div>
-          <div className="board_frame board_frame-top board_frame-left board_frame-right"></div>
-          <div className="board_frame board_frame-top board_frame-left"></div>
-          <div className="board_frame board_frame-top board_frame-left"></div>
-          <div className="board_frame board_frame-top board_frame-left board_frame-right"></div>
-          <div className="board_frame board_frame-top board_frame-bottom board_frame-left"></div>
-          <div className="board_frame board_frame-top board_frame-bottom board_frame-left"></div>
-          <div className="board_frame board_frame-top board_frame-bottom board_frame-left board_frame-right"></div>
-        </div>
         <WordMiniBoard values={props.data.row0}/>
         <WordMiniBoard values={props.data.row1}/>
         <WordMiniBoard values={props.data.row2}/>

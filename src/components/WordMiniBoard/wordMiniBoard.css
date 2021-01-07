@@ -1,7 +1,7 @@
 .board_miniBoard{
     box-sizing:border-box;
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
+    grid-template-columns: repeat(15, 1fr);
     grid-template-rows: repeat(1, 1fr);
     z-index:1;
   }

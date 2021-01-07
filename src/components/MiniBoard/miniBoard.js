@@ -4,8 +4,6 @@ import './miniBoard.css';
 
 function MiniBoard({values}) {
   let frame = []; 
-  let i = 0;
-
 
   for (let i = 0; i < 9; i++)
   {
