@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import WordList from '../WordList/wordList.js';
 import Navbar from '../NavBar/navbar.js';
 import WordBoard from '../WordBoard/wordBoard.js'
 import './wordSearchPage.css';
@@ -72,12 +73,10 @@ class WordSearch extends React.Component {
                 <Navbar/>
                 <div className="wordSearchPage">
                     <WordBoard data={this.state}/>
-                    <div className="words">
-                        <p>Luis</p>
-                        <p>Jose</p>
-                        <p>Esteban</p>
-                    </div>
-                </div>
+
+                    <div className="words"><WordList/></div>
+                </div> 
+
             </div>
 
     )}

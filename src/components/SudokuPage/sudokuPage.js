@@ -2,8 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import Board from '../Board/board.js';
 import Navbar from '../NavBar/navbar.js';
-
 import Message from '../Messages/message.js';
+
+import './sudokuPage.css'
 
 class Sudoku extends React.Component {
     constructor(props){
