@@ -10,11 +10,13 @@ function WordList(props) {
       { name: props.data[5] },
       { name: props.data[6] }
     ];
+
+    let colors = ["F60707", "FF8300", "01E9E6", "51FF00", "0055FF", "6800FF", "FF00F3"];
   
     return (
       <div>
-        {people.map(person => (
-          <p>{person.name}</p>
+        {people.map((person, index) => (
+          <p style={{color: "#" + colors[index]}}>{person.name}</p>
         ))}
       </div>
     );
