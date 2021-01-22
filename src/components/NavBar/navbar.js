@@ -26,7 +26,7 @@ function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav ml-auto">
             <Button onClick={newTable} className="option">New Table</Button>
-            <Button onClick={check} className="option">Check Puzzle</Button>
+            {/* <Button onClick={check} className="option">Check Puzzle</Button> */}
             <Button onClick={solve} className="option">Solve Puzzle</Button>
           </ul>
         </div>
