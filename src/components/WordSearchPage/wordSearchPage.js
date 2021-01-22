@@ -167,7 +167,7 @@ class WordSearch extends React.Component {
           for (var j = 0; j < response.data[i].length; j++)
           {
               var c = grid[response.data[i][j][0]][response.data[i][j][1]].charAt(0).toUpperCase();
-              grid[response.data[i][j][0]][response.data[i][j][1]] = c;
+              grid[response.data[i][j][0]][response.data[i][j][1]] = c + i;
        
             // console.log(response.data[i][j][0] + "," + response.data[i][j][1]);
           }
